@@ -1,0 +1,25 @@
+{
+    "name": "webpage-analysis-tool",
+    "private": true,
+    "version": "1.0.0",
+    "main": "./lib/index.js",
+    "bin": {
+        "analyse-webpage": "./lib/index.js"
+    },
+    "scripts": {
+        "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts --source 'https://www.google.com'",
+        "build": "yarn run tsc -p ."
+    },
+    "dependencies": {
+        "commander": "^4.0.1",
+        "node-fetch": "^2.6.0",
+        "node-html-parser": "^1.1.16"
+    },
+    "devDependencies": {
+        "@types/node": "^12.12.14",
+        "@types/node-fetch": "^2.5.4",
+        "nodemon": "^1.17.3",
+        "ts-node": "^8.5.4",
+        "typescript": "^3.7.2"
+    }
+}

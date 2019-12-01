@@ -1,0 +1,8 @@
+version: '3'
+services:
+  node:
+    image: node:alpine 
+    working_dir: /home/app
+    volumes:
+      - .:/home/app
+    command: sh -c "yarn && yarn run dev"
