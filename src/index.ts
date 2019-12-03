@@ -68,8 +68,12 @@ const extractPaths = (html: HTMLElement | TextNode, path: string = '', results: 
 
 const extractMostCommonTagLongestPath = (pathesCounts: { [name: string]: number }, mostCommonTag: string) => {
     const mostCommonTagPathes = Object.keys(pathesCounts).filter(path => path.endsWith(`/${mostCommonTag}`));
-    const longestPath = mostCommonTagPathes.reduce((prev, current) =>
-    (prev.split('/').length > current.split('/').length) ? prev : current);
+    const longestPath = mostCommonTagPathes.reduce((prev, current) => {
+        const prevDepth = prev.split('/').length;
+        const currentDepth = current.split('/').length
+
+        return (prevDepth > currentDepth || (prevDepth === currentDepth && pathesCounts[prev] > pathesCounts[current])) ? prev : current;
+    });
 
     return {
         [longestPath]: pathesCounts[longestPath]
