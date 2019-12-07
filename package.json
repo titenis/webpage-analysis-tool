@@ -13,20 +13,24 @@
     "dependencies": {
         "commander": "^4.0.1",
         "http-status-codes": "^1.4.0",
+        "jest": "^24.9.0",
         "node-fetch": "^2.6.0",
         "node-html-parser": "^1.1.16"
     },
     "devDependencies": {
         "@types/node": "^12.12.14",
         "@types/node-fetch": "^2.5.4",
+        "@types/jest": "^24.0.23",
         "@typescript-eslint/eslint-plugin": "2.9.0",
         "@typescript-eslint/parser": "^2.9.0",
-        "nodemon": "^1.17.3",
-        "ts-node": "^8.5.4",
-        "typescript": "^3.7.3",
         "eslint": "^6.7.2",
         "eslint-config-prettier": "^6.7.0",
         "eslint-plugin-prettier": "^3.1.1",
-        "prettier": "^1.19.1"
+        "nodemon": "^1.17.3",
+        "prettier": "^1.19.1",
+        "ts-node": "^8.5.4",
+        "typescript": "^3.7.3",
+        "jest": "^24.9.0",
+        "ts-jest": "^24.2.0"
     }
 }
