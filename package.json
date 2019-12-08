@@ -7,7 +7,9 @@
         "webpage-analyser": "./lib/index.js"
     },
     "scripts": {
+        "nodemon": "nodemon --watch 'src/**/*.ts'",
         "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts analyse 'https://www.google.com'",
+        "test": "jest",
         "build": "yarn run tsc -p ."
     },
     "dependencies": {
