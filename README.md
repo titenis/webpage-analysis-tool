@@ -6,7 +6,7 @@ Requirements:
 
 To run, execute in following order:
 - `docker-compose up`
-- `docker-compose exec node webpage-analyser analyse '$urlToAnalyser'`
+- `docker-compose exec node webpage-analyser analyse '$urlToAnalyse'`
 
 To test:
 - `docker-compose up`

@@ -2,8 +2,7 @@
 import { HTMLElement } from "node-html-parser";
 import { TParse } from "./htmlParser";
 
-const isValidHtml = (html: TParse): boolean =>
-  html instanceof HTMLElement && html.tagName !== null;
+const isValidHtml = (html: TParse) => (html as HTMLElement).tagName !== undefined && (html as HTMLElement).tagName !== null;
 
 export interface IAnalysedData {
   [name: string]: number;

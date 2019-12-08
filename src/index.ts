@@ -16,7 +16,7 @@ program
             const parsedHtml = htmlParser.parse(fetchedHtml);
             const tagsCount = htmlAnalyser.getCountByTag(parsedHtml);
             const allPathesCounts = htmlAnalyser.extractPaths(parsedHtml);
-            const mostCommonTag = htmlAnalyser.extractMostCommonTag(tagsCount)
+            const mostCommonTag = htmlAnalyser.extractMostCommonTag(tagsCount);
             const longestMostCommonTagPath = htmlAnalyser.extractMostCommonTagLongestPath(allPathesCounts, mostCommonTag);
     
             const result = {
