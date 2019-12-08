@@ -5,4 +5,4 @@ services:
     working_dir: /home/app
     volumes:
       - .:/home/app
-    command: sh -c "yarn && yarn run dev"
+    command: sh -c "yarn && yarn build && npm i -g && yarn run nodemon"
